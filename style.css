@@ -5,5 +5,229 @@
 
 body {
   font-family: "Inter", sans-serif;
+  height: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  min-width: 260px;
+  margin: auto;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.topimg {
+  margin: 0 auto;
+  background-image: url(img/bg1_3.png);
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 525px;
+}
+
+.top {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.head {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1159px;
+  height: 46px;
+  margin-top: 29px;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.top__block {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1159px;
+  height: 207px;
+  color: #FFFFFF;
+  position: relative;
+  margin-top: 88px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#switcher {
+  position: absolute;
+  left: -999999px;
+  visibility: hidden;
+}
+
+.menu {
+  width: 709px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+}
+
+.list {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.top__titul1 {
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.top__titul2 {
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.ButtonBlue {
+  background-color: #008DCD;
+  border-radius: 30px;
+  color: #FFFFFF;
+  width: 360px;
+  height: 48px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ButtonBlue:hover {
+  -webkit-box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45);
+          box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45);
+}
+
+.ButtonBlue:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #94D1EC;
+}
+
+@media screen and (max-width: 1159px) and (min-width: 375px) {
+  .top {
+    max-width: 768px;
+    max-height: 415px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .head {
+    max-width: 90%;
+    margin-left: 15px;
+    height: 29px;
+  }
+  .menu {
+    max-width: 80%;
+    padding-left: 10px;
+  }
+  .logo img {
+    width: 100px;
+    height: 29px;
+  }
+  .list {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .top__block {
+    max-width: 100%;
+    margin-left: 15px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 250px;
+    margin-top: 55px;
+    margin-bottom: 30px;
+  }
+  .top__titul1 {
+    font-size: 44px;
+    line-height: 53px;
+    width: 500px;
+  }
+  .top__titul2 {
+    font-size: 28px;
+    line-height: 34px;
+    padding-bottom: 20px;
+  }
+  .ButtonBlue {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topimg {
+    width: 100%;
+    background-image: url(img/bg1_2.png);
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .topimg {
+    max-width: 100%;
+    background-image: url(img/bg1_4.png);
+    background-size: contain;
+  }
+  .menu {
+    display: none;
+  }
+  .top__block {
+    display: none;
+  }
+  #open {
+    display: block;
+  }
+  i {
+    color: #FFFFFF;
+    font-size: 24px;
+    padding-right: 7px;
+  }
+  .logo img {
+    width: 100px;
+    height: 29px;
+    padding-left: 7px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

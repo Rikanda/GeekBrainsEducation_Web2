@@ -72,3 +72,13 @@ line-height: 34px;
     line-height: 29px;
 
 }
+
+@mixin ButtonB ($ButtonWidth, $ButtonHeight, $ButtonColor, $FontColor) {
+    background-color: $ButtonColor;
+    border-radius: 30px;
+    color: $FontColor;
+    width: $ButtonWidth;
+    height: $ButtonHeight;
+    outline: none;
+    border: none;
+}

@@ -1,7 +1,20 @@
-@import "vars.scss";
-
 
 @import "mixin.scss";
+
+$FontFamily: 'Inter', sans-serif;
+$FontColorPD: #363636;
+$FontColorLink:  #0055B8;
+$FontColorLinkHover:#0055B8;
+$FontColorLinkPressed: #003675;
+$FontColorPW:#FFFFFF;
+$BackColorDB:#008DCD;
+$BackColorB: #94D1EC;
+$BackColorO:#FFCC00;
+$BackColorLO: #FCE39C;
+$BackColorG: #B3B3B3;
+$ButtonWidth: 360px;
+$ButtonHeight: 48px;
+$ButtonWidthMiddle: 280px;
 
 * {
     margin: 0;
@@ -10,4 +23,214 @@
 
 body {
     font-family: $FontFamily;
+    height: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    min-width: 260px;
+    margin: auto;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.topimg {
+    margin: 0 auto;
+    background-image: url(img/bg1_3.png);
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 525px;
+
+}
+
+.top {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+   
+
+}
+
+.head {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 1159px;
+height: 46px;
+margin-top: 29px;
+position: relative;
+flex-wrap: wrap;
+
+}
+
+.top__block {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1159px;
+    height: 207px;
+    color: $FontColorPW;
+    position: relative;
+    margin-top: 88px;
+    flex-wrap: wrap;
+
+}
+
+#switcher {
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
+}
+
+
+.menu {
+    width: 709px;
+    
+   
+}
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    
+}
+
+.list {
+    text-decoration: none;
+    color: $FontColorPW;
+    @include fontP;
+ 
+}
+
+.top__titul1 {
+    @include fontH1 ;
+}
+
+.top__titul2 {
+    @include fontH2;
+}
+
+.ButtonBlue {
+    @include ButtonB ($ButtonWidth, $ButtonHeight, $BackColorDB, $FontColorPW) ;
+    @include fontP;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButtonBlue:hover {
+    box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45);
+}
+
+.ButtonBlue:active {
+    box-shadow: none;
+    background-color: $BackColorB;
+}
+
+@media screen and (max-width: 1159px) and (min-width: 375px) {
+    
+    
+    .top {
+        max-width: 768px;
+        max-height: 415px;
+       flex-direction: column;
+       justify-content: space-around;
+
+    }
+    .head {
+        max-width: 90%;
+        margin-left: 15px;
+        height: 29px;  
+      
+
+    }
+
+    .menu {
+        max-width: 80%;
+        padding-left: 10px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 29px;   
+    }
+
+  
+    .list {
+        @include fontPMiddle;
+    }
+
+    .top__block {
+        max-width: 100%; 
+        margin-left: 15px;
+        justify-content: space-between;
+    height: 250px;
+    margin-top: 55px;
+    margin-bottom: 30px;
+      
+    }
+
+    .top__titul1 {
+        @include fontH1Middle;
+        width: 500px;
+    }
+
+    .top__titul2 {
+        @include fontH3Middle;
+        padding-bottom: 20px;
+    }
+
+    .ButtonBlue {
+        width: $ButtonWidthMiddle;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .topimg {
+
+        width: 100%;
+        background-image: url(img/bg1_2.png);
+       
+    
+    }
+
+}
+
+
+@media screen and (max-width: 374px)  {
+
+    .topimg {
+        max-width: 100%;
+        background-image: url(img/bg1_4.png);
+        background-size: contain;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .top__block {
+        display: none;
+    }
+
+    #open {
+        display: block;
+    }
+
+    
+i {
+    color: $FontColorPW;
+    font-size: 24px;
+    padding-right: 7px;
+    
+}
+
+.logo img {
+    width: 100px;
+    height: 29px; 
+    padding-left: 7px;  
+}
 }
