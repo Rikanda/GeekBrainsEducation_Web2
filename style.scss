@@ -15,6 +15,7 @@ $BackColorG: #B3B3B3;
 $ButtonWidth: 360px;
 $ButtonHeight: 48px;
 $ButtonWidthMiddle: 280px;
+$ButtonWidthMini: 278px;
 
 * {
     margin: 0;
@@ -84,6 +85,9 @@ flex-wrap: wrap;
     visibility: hidden;
 }
 
+.mini_block {
+    display: none;
+}
 
 .menu {
     width: 709px;
@@ -102,6 +106,9 @@ flex-wrap: wrap;
     color: $FontColorPW;
     @include fontP;
  
+}
+i {
+    display: none;
 }
 
 .top__titul1 {
@@ -169,6 +176,7 @@ flex-wrap: wrap;
     height: 250px;
     margin-top: 55px;
     margin-bottom: 30px;
+    
       
     }
 
@@ -202,18 +210,68 @@ flex-wrap: wrap;
 
 @media screen and (max-width: 374px)  {
 
+    .mini_block  {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 15px;
+    }
+
     .topimg {
-        max-width: 100%;
+        max-width: 100vw;
+        height: 100vh;
         background-image: url(img/bg1_4.png);
-        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+     flex-wrap: nowrap;
     }
 
-    .menu {
-        display: none;
+    
+
+    .menu{
+        width: 100vw;
+        height: 100vh;
+        background-color: $FontColorPW;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        margin: -29px auto;
+        transition: 0.4s;
+        
+        
+        
+.menu__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    }
+    .list {
+        @include fontH2Mini2;
+        color: $FontColorPD;
+    
     }
 
-    .top__block {
-        display: none;
+.top__block {
+    margin-top: 242px;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+    .top__titul1 {
+        color: $FontColorPD;
+        @include fontH1Mini;
+        text-align: center;
+        
+    }
+
+    .top__titul2 {
+        color: $FontColorPD;
+        @include fontH3Mini
+    }
+
+    .ButtonBlue {
+        width: $ButtonWidthMini;
     }
 
     #open {
@@ -221,16 +279,28 @@ flex-wrap: wrap;
     }
 
     
-i {
+    #open i {
     color: $FontColorPW;
-    font-size: 24px;
-    padding-right: 7px;
+    font-size: 36px;
+    padding-right: 15px;
+    
+}
+
+#close i {
+    color: $FontColorPD;
+    font-size: 36px;
+    padding-right: 15px;
     
 }
 
 .logo img {
     width: 100px;
     height: 29px; 
-    padding-left: 7px;  
+    padding-left: 15px;  
 }
+
+#switcher:checked ~ .menu {
+    left: 0;
+}
+
 }

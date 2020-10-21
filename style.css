@@ -81,6 +81,10 @@ body {
   visibility: hidden;
 }
 
+.mini_block {
+  display: none;
+}
+
 .menu {
   width: 709px;
 }
@@ -100,6 +104,10 @@ body {
   color: #FFFFFF;
   font-size: 16px;
   line-height: 19px;
+}
+
+i {
+  display: none;
 }
 
 .top__titul1 {
@@ -205,29 +213,93 @@ body {
 }
 
 @media screen and (max-width: 374px) {
+  .mini_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 15px 15px;
+  }
   .topimg {
-    max-width: 100%;
+    max-width: 100vw;
+    height: 100vh;
     background-image: url(img/bg1_4.png);
-    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .menu {
-    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: -29px auto;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .menu .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .list {
+    font-size: 18px;
+    line-height: 22px;
+    color: #363636;
   }
   .top__block {
-    display: none;
+    margin-top: 242px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  .top__titul1 {
+    color: #363636;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+  }
+  .top__titul2 {
+    color: #363636;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .ButtonBlue {
+    width: 278px;
   }
   #open {
     display: block;
   }
-  i {
+  #open i {
     color: #FFFFFF;
-    font-size: 24px;
-    padding-right: 7px;
+    font-size: 36px;
+    padding-right: 15px;
+  }
+  #close i {
+    color: #363636;
+    font-size: 36px;
+    padding-right: 15px;
   }
   .logo img {
     width: 100px;
     height: 29px;
-    padding-left: 7px;
+    padding-left: 15px;
+  }
+  #switcher:checked ~ .menu {
+    left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
